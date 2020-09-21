@@ -1,0 +1,9 @@
+
+
+#### GIT
+git config --global user.email <email>
+git config --global user.name "username"
+
+git add *
+git commit -am 'wip'
+git remote add origin https://github.com/amacdexp/HanaJupyterLab1.git
