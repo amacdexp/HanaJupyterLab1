@@ -1,3 +1,27 @@
+## windows cmd
+Set KUBECONFIG=C:\<path>\kubeconfig.yaml 
+## windows powershell
+$env:KUBECONFIG="C:\<path>\kubeconfig.yaml" 
+## linux
+export KUBECONFIG=/<path>/kubeconfig.yaml 
+
+kubectl cluster-info 
+
+
+
+## running jupyterlab 
+kubectl replace --force -n <namespace> -f "<path>\jupyter.yaml"
+
+kubectl get deployments -n <namespace>
+kubectl get pods -n <namespace>
+
+kubectl exec --stdin -n <namespace> --tty jupyter-<pod details> -- /bin/bash
+
+### NOTE  May take 3-5 minutes for Pod to be ready as scripts need to run on base image
+###  look for jupyter lab running in the logs
+### e.g.
+### 020-09-21T11:30:39.239921269Z	http://jupyter-64....48dd-5k952:8888/?token=4e2d7116fc........bc9cc7b5c
+
 
 
 #### GIT
